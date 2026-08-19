@@ -30,18 +30,25 @@ body {
 }
 
 .btnMenu {
-    display: flex;
+    display: none;
 }
 
-@media (max-width: 1024px) {
-    header {
-        .btnMenu {
+@media (max-width: 1024px){
+
+    header{
+        padding: 10px 20px;
+    }
+
+    .btnMenu{
         display: initial;
     }
 
-    .links {
-        display: none;
+    .links{
+        
     }
 }
-    }
+
+@media (max-width: 540px){
+
+}
     
