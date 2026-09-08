@@ -1,24 +1,21 @@
-const fraseTexto = document.querySelector(".frase");
-const btnFrase = document.querySelector(".btnFrase");
+const senhaCorreta = "12345"
+const btnEnviar = document.querySelector(".btnEnviar");
 
-const frasesMotivacionais = [
-    "Deus tem um propósito lindo para a sua vida.",
-    "Você é filha de Deus, amada, escolhida e preciosa.",
-    "Confie em Deus, mesmo quando não entender o caminho.",
-    "Sua força vem do Senhor.",
-    "Deus nunca abandona você.",
-    "Não tenha medo do futuro; Deus já está lá.",
-    "Sua identidade está em Cristo, não na opinião das pessoas.",
-    "Você foi criada com propósito e não por acaso.",
-    "Continue firme, Deus está cuidando de tudo.",
-    "Ore, confie e nunca desista da sua fé."
-];
+btnEnviar.addEventListener("click", function(){
+    verificar();
+})
 
-function mostrarFrase() {
-    fraseTexto.textContent = Math.floor(Math.random() * frasesMotivacionais.length);
-    fraseTexto.textContent = frases [indice];
+function verificar() {
+    const input = document.querySelector(".inputSenha")
+    let inputValue = input.value 
+
+    const senha = document.querySelector(".senha");
+    for(let i = 0 ; i < 5; i++) {
+        let number = senha.children[i]
+        number.textContent = inputValue[i]
+
+        if(inputValule[i] == senhaCorreta[i]){
+            number.classList.add("certo");
+        }
+    }
 }
-
-btnFrase.addEventListener("click", function () {
-    mostrarFrase();
-});

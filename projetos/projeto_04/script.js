@@ -1,21 +1,49 @@
-const senhaCorreta = "12345"
-const btnEnviar = document.querySelector(".btnEnviar");
+let tarefas = [];
+let contadorId = 0;
+
+let inputText = document.querySelector(".inputText");
+let btnEnviar = document.querySelector(".btnEnviar");
+let lista = document.querySelector(".lista");
 
 btnEnviar.addEventListener("click", function(){
-    verificar();
+    adicionarTarefa();
 })
 
-function verificar() {
-    const input = document.querySelector(".inputSenha")
-    let inputValue = input.value 
-
-    const senha = document.querySelector(".senha");
-    for(let i = 0 ; i < 5; i++) {
-        let number = senha.children[i]
-        number.textContent = inputValue[i]
-
-        if(inputValule[i] == senhaCorreta[i]){
-            number.classList.add("certo");
-        }
+inputText.addEventListener("keydown", function(event){
+    if (event.key === "Enter"){
+        adicionarTarefa();
     }
+})
+
+function adicionarTarefa() {
+    //serve para deixar a pessoa fazer espaços nas pontas exemplo:      lavar carro
+    let texto = inputText.value.trim();
+    // serve para não enviar a lista vazia exemplo: vazio
+    if(texto !== ""){
+        contadorId++
+        tarefas.push({id: contadorId, tarefa: texto, concluido: false});
+        inputText.value = "";
+        renderizar();
+ }
+}
+
+function renderizar() {
+    lista.innerHTML = "";
+    tarefas.forEach(function (item){
+        let li = document.createElement("li");
+        li.textContent = item.tarefa;
+        lista.appendChild(li);
+
+        let btnExcluir = document.createElement("button")
+        btnExcluir.innerText = "❌"
+        li.appendChild(btnExcluir);
+        btnExcluir.addEventListener("click", function(e){
+            e.stopPropagation();
+
+            tarefas = tarefas.filter(function(t){
+                return t.id !== item.id
+            })
+            renderizar();
+        })
+    });
 }

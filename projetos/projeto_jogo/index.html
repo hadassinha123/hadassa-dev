@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">
+        <img src="assets/among-27.png" class="among-01">
+
+        <div>
+            <div class="tentativas">
+            <h1>TENTATIVAS</h1>
+            <div class="contador">
+                <h2 class="contador">
+                    <span id="tentativa">0</span><span class="limite">/6</span>
+                </h2>
+            </div>
+        </div>
+        <p>Adivinhe a palavra secreta de 5 letras.</p>
+
+        <a href="index.html" class="btnRetun"></a>
+    </div>
+    
+        
+    <div class="card">
+        <input
+            type="text"
+            class="inputText"
+            id="inputText"
+            placeholder="Acerte a senha"
+            maxlength="5"
+        >
+        <button class="btnEnviar" id="btnEnviar">
+            ENVIAR
+        </button>
+
+        <div class="tabuleiro"></div>
+    </div>    
+
+    <div class="modal" id="modalVitoria">
+        <div class="modalConteudo">
+            <h2 class="vitoria">Vitória</h2>
+            <button class="fechar" id="fecharVitoria"></button>
+            <img class="fundoModal" src="assets/background-victory.png" alt="Vitória">
+            <img class="amongModal" src="assets/among-27.png" alt="among">
+        </div>
+    </div>
+
+    <div class="modal" id="modalDerrota">
+        <div class="modalConteudo">
+            <h2 class="derrota">Derrota</h2>
+            <button class="fechar" id="fecharDerrota"></button>
+            <img class="fundoModal" src="assets/background-defeat.png" alt="Derrota">
+            <img class="amongModal" src="assets/among-27.png" alt="among">
+        </div>
+    </div>
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>

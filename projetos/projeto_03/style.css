@@ -1,38 +1,29 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-body {
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: rgb(255, 154, 188);
-}
-
-.container {
-    padding: 40px;
-    border-radius: 20px;
-    background-color: rgb(253, 233, 120);
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+.digito {
+    width: 50px;
+    height: 50px;
+    border: 1px solid black;
     text-align: center;
+    line-height: 50px;
 }
 
-.btnFrase {
-    padding: 20px;
-    background-color: rgba(0, 0, 0, 0.295);
-    color: white;
-    border-radius: 50px;
-    cursor: pointer;
-    font-weight: 700;
-    font-size: 18px;
+.senha {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin: 20px 0;
 }
 
-.btnFrase:hover {
-    background-color: rgba(255, 154, 188, 0.712);
+    .certo {
+        background-color: green;
+    }
+
+.erro {
+    background-color: red;
 }
+

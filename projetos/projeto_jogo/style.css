@@ -1,0 +1,362 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #0a1b2d;
+}
+
+
+.header{
+     height: 203px;
+     width: 100%;
+     background-color: #081728;
+     position: absolute;
+     border-bottom: 3px solid  #020c18;
+    
+}
+
+.painel-01 {
+    position: relative;
+    left: 1500px;
+}
+
+.among-01{
+    position: absolute;
+    left: 400px;
+    top: 30px;
+}
+
+.retun-01{
+    position: relative;
+    left: 1750px;
+    bottom: 260px;
+}
+
+.tentativas {
+    width:240px;
+    height: 143px;
+    background: #0A1B2D;
+    margin: 0 auto;
+    margin-top: 20px;
+    border: 4px solid #051222;
+    border-radius: 20px;
+    text-align: center;
+    background: #0A1B2D;
+    padding: 15px 20px;
+}
+
+
+.tentativas h1 {
+    font-size: 30px;
+    color: #9FB5C9;
+    text-decoration: none;
+}
+
+
+.contador h2 {
+    font-size: 50px;
+    color: #2B4056;
+}
+
+#tentativa {
+    color: #238E4B;
+}
+
+p{
+    color: #9FB5C9;
+    text-align: center;
+    font-weight: bold;
+    margin: 10px;
+    
+}
+
+.btnRetun {
+    background-image: url(assets/return.png);
+    background-position: center;
+    background-size: auto;
+    cursor: pointer;
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: 20px;
+    right: 5%;
+    border: none;
+    border-radius:6px;
+    padding: 0;
+}
+
+.btnRetun:hover {
+    background-image: url(assets/return-hover.png);
+    background-position: center;
+    background-size: auto;
+}
+
+.card {
+    width: 380px;
+    height: 588px;
+    margin: 35px auto;
+    padding: 15px;
+    border: 3px solid #000612;
+    border-radius: 18px;
+    background-color: #081625;
+    text-align: center;
+}
+
+.inputText {
+    width: 100%;
+    height: 45px;
+    border: 3px solid #2B4056;
+    border-radius: 8px;
+    background-color: #06111F;
+    color: white;
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+    outline: none;
+}
+
+.btnEnviar {
+    width: 100%;
+    height: 38px;
+    margin-top: 8px;
+    border: 3px solid #06111F;
+    border-radius: 6px;
+    background-color: #2B4056;
+    color: #081625;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.tabuleiro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.linhaTabuleiro {
+    display: flex;
+    gap: 10px;
+    margin: 3px;
+}
+
+.casa {
+    width: 60px;
+    height: 60px;
+    border: 3px solid #2B4056;
+    border-radius: 10px;
+    background-color: #06111F;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    box-sizing: border-box;
+}
+
+.casa.certo {
+    background-color: #238C49;
+    border: 3px solid #238C49;
+}
+
+.casa.presente {
+    background-color: #CB9D21;
+    border: 3px solid #CB9D21;
+}
+
+.casa.erro {
+    background-color: #06111F;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.75);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal.ativo {
+    display: flex;
+}
+
+.modalConteudo {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+.fundoModal {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+
+.amongModal {
+    position: absolute;
+    width: 180px;
+    height: auto;
+    left: 50%;
+    top: 58%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+
+.fechar {
+    background-image: url(assets/close.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.fechar:hover {
+    background-image: url(assets/close-hover.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.vitoria {
+    color: #00C0DD;
+}
+
+.derrota {
+    color: #DE0000;
+}
+
+.modalConteudo h2 {
+    position: absolute;
+    top: 100px;
+    left: 0;
+    width: 100%;
+    font-size: 80px;
+    font-weight: bold;
+    text-align: center;
+    margin: 0;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 390px) {
+
+    .header {
+        height: 150px;
+    }
+
+    .among-01 {
+        width: 100px;
+        height: auto;
+        left: 50%;
+        top: 20px;
+        margin-left: -50px;
+    }
+
+
+    .tentativas {
+        width: 150px;
+        height: 95px;
+        margin-top: 15px;
+        padding: 8px;
+    }
+
+    .tentativas h1 {
+        font-size: 20px;
+    }
+
+    .contador h2 {
+        font-size: 35px;
+    }
+
+    p {
+        font-size: 14px;
+        margin: 8px;
+    }
+
+    .btnRetun {
+        width: 35px;
+        height: 35px;
+        top: 15px;
+        right: 15px;
+    }
+
+    .card {
+        width: 95%;
+        height: auto;
+        min-height: 500px;
+        margin: 25px auto;
+        padding: 12px;
+    }
+
+    .inputText {
+        height: 42px;
+        font-size: 18px;
+    }
+
+    .btnEnviar {
+        height: 38px;
+        font-size: 18px;
+    }
+
+    .tabuleiro {
+        gap: 6px;
+        margin-top: 15px;
+    }
+
+    .linhaTabuleiro {
+        gap: 6px;
+        margin: 2px;
+    }
+
+    .casa {
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+        border-radius: 8px;
+    }
+
+
+    /* MODAL NO CELULAR */
+
+    .modalConteudo h2 {
+        top: 8%;
+        font-size: 50px;
+    }
+
+    .amongModal {
+        width: 130px;
+        top: 58%;
+    }
+
+    .fechar {
+        width: 35px;
+        height: 35px;
+        right: 15px;
+        top: 15px;
+    }
+}

@@ -1,0 +1,26 @@
+#first {
+    color: blueviolet;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.second {
+    color: crimson;
+    font-style: bold;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+#mih {
+    color: dodgerblue;
+    font-size: 22px;
+    font-weight: 700;
+    font-style: bold;
+}
+
+#ouu {
+    color: mediumorchid;
+    font-size: 18px;
+    font-weight: 400;
+    font-style: regolar;
+}
